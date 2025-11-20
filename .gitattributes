@@ -12,3 +12,17 @@ Assets/Audio/*.wav filter=lfs diff=lfs merge=lfs -text
 Assets/Audio/*.mp3 filter=lfs diff=lfs merge=lfs -text
 Assets/Scenes/*.unity filter=lfs diff=lfs merge=lfs -text
 *.webm filter=lfs diff=lfs merge=lfs -text
+Assets/Samples/XR filter=lfs diff=lfs merge=lfs -text
+Assets/Scenes/SampleScene/Lightmap-0_comp_light.exr filter=lfs diff=lfs merge=lfs -text
+Assets/Scenes/SampleScene/Lightmap-1_comp_light.exr filter=lfs diff=lfs merge=lfs -text
+Assets/Scenes/SampleScene/Lightmap-3_comp_light.exr filter=lfs diff=lfs merge=lfs -text
+Assets/VRMPAssets/MiniGames/MiniGameVideos/Climbing filter=lfs diff=lfs merge=lfs -text
+Assets/VRMPAssets/MiniGames/MiniGameVideos/Slingshot filter=lfs diff=lfs merge=lfs -text
+Assets/VRMPAssets/MiniGames/MiniGameVideos/Whack filter=lfs diff=lfs merge=lfs -text
+Assets/VRMPAssets/Tutorial/TutorialVideos/Onboarding filter=lfs diff=lfs merge=lfs -text
+Assets/TextMesh filter=lfs diff=lfs merge=lfs -text
+Assets/VRMPAssets/Audio/MXClips/2501 filter=lfs diff=lfs merge=lfs -text
+Assets/VRMPAssets/Audio/MXClips/Spaceship-Kevin filter=lfs diff=lfs merge=lfs -text
+Assets/VRMPAssets/Audio/MXClips/shape filter=lfs diff=lfs merge=lfs -text
+Assets/VRMPAssets/Audio/SFXClips/spring-birds-loop-with-low-cut-new-jersey-6267.mp3 filter=lfs diff=lfs merge=lfs -text
+Assets/VRMPAssets/Prefabs/PlayerPrefabs/XRMPT_XR_Origin_Setup.prefab filter=lfs diff=lfs merge=lfs -text
