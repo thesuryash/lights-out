@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.atteneder.gltfast": "https://github.com/atteneder/glTFast.git",
     "com.meta.xr.sdk.audio": "81.0.0",
     "com.meta.xr.sdk.haptics": "81.0.0",
     "com.meta.xr.simulator": "81.0.0",
