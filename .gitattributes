@@ -26,3 +26,4 @@ Assets/VRMPAssets/Audio/MXClips/Spaceship-Kevin filter=lfs diff=lfs merge=lfs -t
 Assets/VRMPAssets/Audio/MXClips/shape filter=lfs diff=lfs merge=lfs -text
 Assets/VRMPAssets/Audio/SFXClips/spring-birds-loop-with-low-cut-new-jersey-6267.mp3 filter=lfs diff=lfs merge=lfs -text
 Assets/VRMPAssets/Prefabs/PlayerPrefabs/XRMPT_XR_Origin_Setup.prefab filter=lfs diff=lfs merge=lfs -text
+*.glb filter=lfs diff=lfs merge=lfs -text
