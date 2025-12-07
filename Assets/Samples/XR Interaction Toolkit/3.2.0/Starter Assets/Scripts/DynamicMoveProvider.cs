@@ -11,6 +11,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
     /// </summary>
     public class DynamicMoveProvider : ContinuousMoveProvider
     {
+        
         /// <summary>
         /// Defines which transform the XR Origin's movement direction is relative to.
         /// </summary>
