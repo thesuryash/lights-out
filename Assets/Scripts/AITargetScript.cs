@@ -5,43 +5,146 @@ public class AITargetScript : MonoBehaviour
 {
     public Transform target;
     public float TargetingDistance;
+    public float waitTimeOnWayPoint = 1f;
+    public Path path;
 
     private NavMeshAgent m_Agent;
     private float m_Distance;
-    // change this to a patrol setting instead of this thing
-    private Vector3 m_StartingPoint;
-    private bool m_PathCalculate = true;
+    private bool m_PathCalculate = false;
 
+    float time = 0f;
+
+    public float sightMemoryTime = 2f;
+    private float sightTimer = 0f;  
+
+    private bool sawPlayer = false;
+
+    private void Awake() {
+
+        m_Agent = GetComponent<NavMeshAgent>();
+
+    }
 
     void Start() {
 
-        m_Agent = GetComponent<NavMeshAgent>();
-        m_StartingPoint = transform.position;
+        m_Agent.destination = path.GetCurrentWayPoint();
 
     }
 
-    void Update() {
+    void FixedUpdate()
+    {
+        Vector3 origin = transform.position + Vector3.up * 1.5f; // Eye height
+        Vector3 direction = (target.position - origin).normalized;
+
+        RaycastHit hit;
+
+        if (Physics.Raycast(origin, direction, out hit, Mathf.Infinity))
+        {
+            if (hit.collider.CompareTag("Player"))
+            {
+                sawPlayer = true;
+            }
+        }
+
+        if (sawPlayer) {
+            m_PathCalculate = true;
+            sawPlayer = false;
+            sightTimer = sightMemoryTime;
+        }
+        else
+        {
+            if (sightTimer > 0)
+            {
+                sightTimer -= Time.deltaTime;
+                m_PathCalculate = true;
+            }
+            else
+            {
+                m_PathCalculate = false;
+            }
+        }
+    }
+
+    void Update()
+    {
         m_Distance = Vector3.Distance(m_Agent.transform.position, target.position);
 
-        if (m_Distance > TargetingDistance) 
+        if (m_PathCalculate && m_Distance < TargetingDistance) 
         {
-            m_Agent.isStopped = true;
+            Chase();
         }
         else 
         {
-            m_Agent.isStopped = false;
-            m_Agent.destination = target.position;
+            Patrol();
+        }
+    }
 
-            if (!m_Agent.hasPath && m_PathCalculate) 
+    void Patrol()
+    {
+        m_Agent.destination = path.GetCurrentWayPoint();
+
+        if (m_Agent.remainingDistance <= 0.1f)
+        {
+            time += Time.deltaTime;
+
+            if (time >= waitTimeOnWayPoint)
             {
-                m_Agent.destination = m_StartingPoint;
-                m_PathCalculate = false;
-            }
-            else 
-            {
-                m_Agent.destination = target.position;
-                m_PathCalculate = true;
+                time = 0f;
+                m_Agent.destination = path.GetNextWayPoint();
             }
         }
     }
+
+    void Chase()
+    {
+        m_Agent.destination = target.position;
+    }
+
+
+
+
+    // void Update() {
+
+    //     m_Distance = Vector3.Distance(m_Agent.transform.position, target.position);
+        
+
+    //     if (m_Distance > TargetingDistance) 
+    //     {
+    //         m_Agent.destination = path.GetCurrentWayPoint();
+            
+    //         if (m_Agent.remainingDistance <+ 0.1f)
+    //         {
+    //             time += Time.deltaTime;
+    //             if (time >= waitTimeOnWayPoint)
+    //             {
+    //                 time = 0f;
+    //                 m_Agent.destination = path.GetNextWayPoint();
+    //             }
+    //         }
+    //     }
+    //     else 
+    //     {
+    //         m_Agent.destination = target.position;
+
+    //         if (!m_Agent.hasPath && m_PathCalculate) 
+    //         {
+    //             m_Agent.destination = path.GetCurrentWayPoint();
+
+    //             if (m_Agent.remainingDistance <+ 0.1f)
+    //             {
+    //                 time += Time.deltaTime;
+    //                 if (time >= waitTimeOnWayPoint)
+    //                 {
+    //                     time = 0f;
+    //                     m_Agent.destination = path.GetNextWayPoint();
+    //                 }
+    //             }
+    //         }
+    //         else 
+    //         {
+    //             m_Agent.destination = target.position;
+    //             m_PathCalculate = true;
+    //         }
+    //     }
+    // }
 }
