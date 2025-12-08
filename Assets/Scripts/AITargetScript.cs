@@ -14,6 +14,11 @@ public class AITargetScript : MonoBehaviour
 
     float time = 0f;
 
+    public float sightMemoryTime = 2f;
+    private float sightTimer = 0f;  
+
+    private bool sawPlayer = false;
+
     private void Awake() {
 
         m_Agent = GetComponent<NavMeshAgent>();
@@ -30,7 +35,6 @@ public class AITargetScript : MonoBehaviour
     {
         Vector3 origin = transform.position + Vector3.up * 1.5f; // Eye height
         Vector3 direction = (target.position - origin).normalized;
-        float maxDistance = Vector3.Distance(origin, target.position);
 
         RaycastHit hit;
 
@@ -38,16 +42,26 @@ public class AITargetScript : MonoBehaviour
         {
             if (hit.collider.CompareTag("Player"))
             {
+                sawPlayer = true;
+            }
+        }
+
+        if (sawPlayer) {
+            m_PathCalculate = true;
+            sawPlayer = false;
+            sightTimer = sightMemoryTime;
+        }
+        else
+        {
+            if (sightTimer > 0)
+            {
+                sightTimer -= Time.deltaTime;
                 m_PathCalculate = true;
             }
             else
             {
                 m_PathCalculate = false;
             }
-        }
-        else
-        {
-            m_PathCalculate = false;
         }
     }
 
