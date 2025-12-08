@@ -222,7 +222,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -243,7 +243,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 1
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -272,7 +272,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 1
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -341,7 +341,252 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: Wolf(Clone)
+      parentName: 
+      position: {x: -0, y: -0.75, z: 0}
+      rotation: {x: -0.065403126, y: 0, z: -0, w: 0.99785894}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Right Leg
+      parentName: Wolf(Clone)
+      position: {x: -0.25, y: 0.9375, z: 0.5}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid
+      parentName: Right Leg
+      position: {x: -0.125, y: -2.5, z: -0.5}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_3
+      parentName: Right Leg
+      position: {x: -0.125, y: -2.3125, z: -0.25}
+      rotation: {x: 0.15212339, y: -0, z: -0, w: 0.98836154}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_6
+      parentName: Right Leg
+      position: {x: -0.125, y: -0.5, z: -0.1875}
+      rotation: {x: 0.7933533, y: 0, z: 0, w: 0.6087614}
+      scale: {x: 1, y: 1, z: 1}
+    - name: beveled_cuboid_1
+      parentName: Right Leg
+      position: {x: -0.1875, y: 0, z: -0.0625}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Left Leg
+      parentName: Wolf(Clone)
+      position: {x: 0.1875, y: 0.9375, z: 0.5}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_1
+      parentName: Left Leg
+      position: {x: 0.25, y: -2.5, z: -0.5}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_2
+      parentName: Left Leg
+      position: {x: 0.25, y: -2.3125, z: -0.25}
+      rotation: {x: 0.15212339, y: -0, z: -0, w: 0.98836154}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_4
+      parentName: Left Leg
+      position: {x: 0.25, y: -1.125, z: -0.0625}
+      rotation: {x: 0.15212339, y: -0, z: -0, w: 0.98836154}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_5
+      parentName: Left Leg
+      position: {x: 0.25, y: -0.4375, z: -0.1875}
+      rotation: {x: 0.7933533, y: 0, z: 0, w: 0.6087614}
+      scale: {x: 1, y: 1, z: 1}
+    - name: beveled_cuboid
+      parentName: Left Leg
+      position: {x: 0.25, y: 0, z: -0.0625}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Torso
+      parentName: Wolf(Clone)
+      position: {x: -0.5625, y: 0.9375, z: 0.4375}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: beveled_cuboid_2
+      parentName: Torso
+      position: {x: 0.5625, y: 0.3125, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: beveled_cuboid_3
+      parentName: Torso
+      position: {x: 0.5625, y: 1.0625, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Left Arm
+      parentName: Wolf(Clone)
+      position: {x: -0, y: 1.6875, z: 0}
+      rotation: {x: 0.065403126, y: -0, z: -0, w: 0.99785894}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hand
+      parentName: Left Arm
+      position: {x: 0.9375, y: 0.3125, z: -1}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_7
+      parentName: Hand
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.27982903, y: 0, z: -0, w: 0.96004987}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_8
+      parentName: Hand
+      position: {x: -0.1875, y: 0.4375, z: -0.125}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_9
+      parentName: Hand
+      position: {x: -0, y: 0.4375, z: -0.125}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_10
+      parentName: Hand
+      position: {x: 0.1875, y: 0.4375, z: -0.125}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_11
+      parentName: Hand
+      position: {x: -0, y: 0.8125, z: -0.1875}
+      rotation: {x: -0.57357645, y: 0, z: -0, w: 0.81915206}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_12
+      parentName: Hand
+      position: {x: -0.1875, y: 0.8125, z: -0.1875}
+      rotation: {x: -0.57357645, y: 0, z: -0, w: 0.81915206}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_13
+      parentName: Hand
+      position: {x: 0.1875, y: 0.8125, z: -0.1875}
+      rotation: {x: -0.57357645, y: 0, z: -0, w: 0.81915206}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_21
+      parentName: Hand
+      position: {x: -0.25, y: 0.1875, z: -0.125}
+      rotation: {x: 0.021809695, y: 0.0377755, z: 0.49952415, w: 0.8652012}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_22
+      parentName: Hand
+      position: {x: -0.5, y: 0.375, z: -0.125}
+      rotation: {x: -0.4301978, y: -0.22684506, z: 0.446646, w: 0.750985}
+      scale: {x: 1, y: 1, z: 1}
+    - name: beveled_cuboid_4
+      parentName: Left Arm
+      position: {x: 0.875, y: 0.875, z: 0.4375}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: beveled_cuboid_6
+      parentName: Left Arm
+      position: {x: 0.9375, y: 0, z: 0.5}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: beveled_cuboid_7
+      parentName: Left Arm
+      position: {x: 0.9375, y: -0.0625, z: -0.5}
+      rotation: {x: 0.87672675, y: -0, z: 0, w: 0.48098877}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Right Arm
+      parentName: Wolf(Clone)
+      position: {x: 0.875, y: 2.5625, z: 0.4375}
+      rotation: {x: 0.087155744, y: -0, z: -0, w: 0.9961947}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hand2
+      parentName: Right Arm
+      position: {x: -1.8125, y: -0.5625, z: -1.4375}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_14
+      parentName: Hand2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.27982903, y: 0, z: -0, w: 0.96004987}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_15
+      parentName: Hand2
+      position: {x: -0.1875, y: 0.4375, z: -0.125}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_16
+      parentName: Hand2
+      position: {x: -0, y: 0.4375, z: -0.125}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_17
+      parentName: Hand2
+      position: {x: 0.1875, y: 0.4375, z: -0.125}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_18
+      parentName: Hand2
+      position: {x: -0, y: 0.8125, z: -0.1875}
+      rotation: {x: -0.57357645, y: 0, z: -0, w: 0.81915206}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_19
+      parentName: Hand2
+      position: {x: -0.1875, y: 0.8125, z: -0.1875}
+      rotation: {x: -0.57357645, y: 0, z: -0, w: 0.81915206}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_20
+      parentName: Hand2
+      position: {x: 0.1875, y: 0.8125, z: -0.1875}
+      rotation: {x: -0.57357645, y: 0, z: -0, w: 0.81915206}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_23
+      parentName: Hand2
+      position: {x: 0.25, y: 0.1875, z: -0.125}
+      rotation: {x: -0.021809695, y: 0.0377755, z: -0.49952415, w: 0.8652012}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_24
+      parentName: Hand2
+      position: {x: 0.5, y: 0.375, z: -0.125}
+      rotation: {x: -0.51402134, y: 0.46044996, z: -0.29409915, w: 0.66126674}
+      scale: {x: 1, y: 1, z: 1}
+    - name: beveled_cuboid_5
+      parentName: Right Arm
+      position: {x: -1.75, y: 0, z: 0}
+      rotation: {x: -6.123234e-17, y: 1, z: 6.123234e-17, w: 6.123234e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: beveled_cuboid_8
+      parentName: Right Arm
+      position: {x: -1.8125, y: -0.875, z: 0.0625}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: beveled_cuboid_9
+      parentName: Right Arm
+      position: {x: -1.8125, y: -0.9375, z: -0.9375}
+      rotation: {x: 0.87672675, y: -0, z: 0, w: 0.48098877}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head
+      parentName: Wolf(Clone)
+      position: {x: -0, y: 1.6875, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: beveled_cuboid_10
+      parentName: Head
+      position: {x: -0, y: 1.8125, z: 0.375}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cuboid_25
+      parentName: Head
+      position: {x: -0, y: 1.1875, z: 0.4375}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pyramid
+      parentName: Head
+      position: {x: -0.375, y: 2.375, z: 0.5}
+      rotation: {x: 0, y: 0, z: 0.19509034, w: 0.9807853}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pyramid_1
+      parentName: Head
+      position: {x: 0.375, y: 2.375, z: 0.5}
+      rotation: {x: 0.17348287, y: 0.98387045, z: 0.023436658, w: 0.03678825}
+      scale: {x: 1, y: 1, z: 1}
+    - name: beveled_cuboid_11
+      parentName: Head
+      position: {x: -0, y: 1.3125, z: -0.25}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -358,7 +603,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
