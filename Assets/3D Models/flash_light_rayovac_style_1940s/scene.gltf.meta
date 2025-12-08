@@ -1,0 +1,40 @@
+fileFormatVersion: 2
+guid: b7de7336944ccd746b11900e05bc124f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\3D Models\flash_light_rayovac_style_1940s\scene.bin
+    assetPath: Assets\3D Models\flash_light_rayovac_style_1940s\scene.bin
+  - type: 1
+    originalUri: Assets\3D Models\flash_light_rayovac_style_1940s\textures\RayOVac_Flashlight_handle_Mat_baseColor.jpeg
+    assetPath: Assets\3D Models\flash_light_rayovac_style_1940s\textures\RayOVac_Flashlight_handle_Mat_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\3D Models\flash_light_rayovac_style_1940s\textures\RayOVac_Flashlight_handle_Mat_normal.jpeg
+    assetPath: Assets\3D Models\flash_light_rayovac_style_1940s\textures\RayOVac_Flashlight_handle_Mat_normal.jpeg
+  - type: 1
+    originalUri: Assets\3D Models\flash_light_rayovac_style_1940s\textures\RayOVac_Flashlight_Glass_baseColor.png
+    assetPath: Assets\3D Models\flash_light_rayovac_style_1940s\textures\RayOVac_Flashlight_Glass_baseColor.png
+  reportItems: []
