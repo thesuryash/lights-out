@@ -1,45 +1,43 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
 
 public class Torch : MonoBehaviour
 {
-    [SerializeField] public Light lightSource;
-    [SerializeField] public AudioClip flickeringAudio;
+    [SerializeField] private Light lightSource;
+    [SerializeField] private AudioClip flickeringAudio;
     [SerializeField] private float flickerDuration = 2f;
     [SerializeField] private Vector2 flickerIntervalRange = new Vector2(0.05f, 0.2f);
     [SerializeField] private Vector2 intensityRange = new Vector2(0.3f, 1.2f);
 
-    private bool isPickedUp = false;
     private bool hasBurnedOut = false;
     private AudioSource _audioSource;
+    private HapticImpulsePlayer _haptics;  
 
     void Awake()
     {
         if (lightSource != null)
             lightSource.enabled = false;
 
-        _audioSource = GetComponent<AudioSource>();
-        if (_audioSource == null)
-            _audioSource = gameObject.AddComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>() ?? gameObject.AddComponent<AudioSource>();
     }
 
-    // Call this when the player picks up the torch
-    public void OnPickedUp()
+    // called when grabbed; we pass in the hand's HapticImpulsePlayer
+    public void OnPickedUp(HapticImpulsePlayer haptics)
     {
-        if (hasBurnedOut || isPickedUp)
-            return;
+        if (hasBurnedOut) return;
 
-        isPickedUp = true;
-        StartCoroutine(LightSourceSequence());
+        _haptics = haptics;
+        StartCoroutine(FlickerSequence());
     }
 
-    private System.Collections.IEnumerator LightSourceSequence()
+    private System.Collections.IEnumerator FlickerSequence()
     {
         float startTime = Time.time;
 
         if (lightSource != null)
             lightSource.enabled = true;
 
-        if (flickeringAudio != null && _audioSource != null)
+        if (flickeringAudio != null)
         {
             _audioSource.clip = flickeringAudio;
             _audioSource.loop = true;
@@ -48,12 +46,19 @@ public class Torch : MonoBehaviour
 
         while (Time.time - startTime < flickerDuration)
         {
+            // visual flicker
             if (lightSource != null)
             {
-                // random intensity
                 lightSource.intensity = Random.Range(intensityRange.x, intensityRange.y);
-                // randomly turn off/on for harsher flicker
                 lightSource.enabled = Random.value > 0.2f;
+            }
+
+            // haptic flicker via HapticImpulsePlayer
+            if (_haptics != null)
+            {
+                float amp = Random.Range(0.2f, 0.9f);
+                float dur = Random.Range(0.04f, 0.12f);
+                _haptics.SendHapticImpulse(amp, dur);
             }
 
             yield return new WaitForSeconds(Random.Range(flickerIntervalRange.x, flickerIntervalRange.y));
