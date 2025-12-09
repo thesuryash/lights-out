@@ -1,0 +1,310 @@
+fileFormatVersion: 2
+guid: 76435b35b13f246dbb59f2c8f88a5ac3
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chest.png
+    second: {fileID: 2100000, guid: 5c42614a3c8d14202a5be47d7809f6a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fing1.png
+    second: {fileID: 2100000, guid: ce5397f67110f467482bb7676a06b58e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fing10.png
+    second: {fileID: 2100000, guid: 7519dab626cd849a1892a01b454b2fc4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fing11.png
+    second: {fileID: 2100000, guid: 6c8ee212e7c074c6483e5ad4e0290a9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fing12.png
+    second: {fileID: 2100000, guid: 6bfaf53bd3128451c9acc35c4e0312a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fing13.png
+    second: {fileID: 2100000, guid: 0eeb05987ab4d498c8f20e93225a4703, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fing14.png
+    second: {fileID: 2100000, guid: f11518fc1156f47c793594d9b3c4819b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fing15.png
+    second: {fileID: 2100000, guid: 3cb8dc18ca5064bd38d8adce85644060, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fing16.png
+    second: {fileID: 2100000, guid: d924e4c3395ad423f807d1765c45e0d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fing2.png
+    second: {fileID: 2100000, guid: 2da79dda833b146d08730a534bf53d15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fing3.png
+    second: {fileID: 2100000, guid: aab3a77d71e6f4331a7277d507e1fd75, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fing4.png
+    second: {fileID: 2100000, guid: a8c514e6439f54c588273ae2f377fd89, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fing5.png
+    second: {fileID: 2100000, guid: 89e804c6142864a2ea866ac18ae2fc42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fing6.png
+    second: {fileID: 2100000, guid: d048f1fecdebe40309680788323ab7b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fing7.png
+    second: {fileID: 2100000, guid: 488e22e17259f40fdb63998d413c2325, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fing8.png
+    second: {fileID: 2100000, guid: 319b9e33f895140babefde52f5d3f93f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fing9.png
+    second: {fileID: 2100000, guid: 11085198dd9424b868fc476d0788506a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hip.png
+    second: {fileID: 2100000, guid: 447748ea6e0144ec8b5c025b9e5da2e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LArmBall.png
+    second: {fileID: 2100000, guid: 2f19516258cd943f7ad9d4c4eb74f6be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LBLeg.png
+    second: {fileID: 2100000, guid: 57363cb7e2ff24ba1bc5713aa058aae9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LBotArm.png
+    second: {fileID: 2100000, guid: 7eaaf0adaaf484d5aa928f4a4ce7c81a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LEar.png
+    second: {fileID: 2100000, guid: 3cb8dc18ca5064bd38d8adce85644060, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LFoot.png
+    second: {fileID: 2100000, guid: 7d0a2899889c346e2a90a27638f6962f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LJoint.png
+    second: {fileID: 2100000, guid: 582779a67672b4697863f796e608e1c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LKnee.png
+    second: {fileID: 2100000, guid: 10f76e38fa1be42899e5e8e76c7d180f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LPalm.png
+    second: {fileID: 2100000, guid: b09feec690fb04588b6ca928647d474d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LUpArm.png
+    second: {fileID: 2100000, guid: aca2ce662084246f8b74fe4b74ecbd1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LeftHam.png
+    second: {fileID: 2100000, guid: fb632c2c081bc48e1b8cf7240cf6ffdd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Neck.png
+    second: {fileID: 2100000, guid: c9f294da56f9b42f892d41835d7e8a56, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RArmBall.png
+    second: {fileID: 2100000, guid: 3717599c4bbb047deb4c8aaf45a398d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RBLeg.png
+    second: {fileID: 2100000, guid: b79fc3c3ec14545d39f7b47c060a4bac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RBotArm.png
+    second: {fileID: 2100000, guid: 35142a91dcebd44a58619907db2177ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: REar.png
+    second: {fileID: 2100000, guid: 3cb8dc18ca5064bd38d8adce85644060, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RFoot.png
+    second: {fileID: 2100000, guid: 7aa1c7a515067402585a4df20e609d3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RPalm.png
+    second: {fileID: 2100000, guid: 21e8bedd62578481abc1efcc3245ecab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RUpArm.png
+    second: {fileID: 2100000, guid: f9990e213bc6a419cbf7394856027e6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RightHame.png
+    second: {fileID: 2100000, guid: f270d0108283548b5b48265bd280046c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RightJoint.png
+    second: {fileID: 2100000, guid: bafe178369fbc454f831bc5165c91769, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body.png
+    second: {fileID: 2100000, guid: e59b341214dc94a2f9ee25513c00ec1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: jaw.png
+    second: {fileID: 2100000, guid: b8615e8c9e1ee4169a70d00a34fc3b76, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
