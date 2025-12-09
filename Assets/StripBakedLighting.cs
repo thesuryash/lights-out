@@ -136,3 +136,4 @@ public class StripBakedLighting : MonoBehaviour
     }
 #endif
 }
+    
