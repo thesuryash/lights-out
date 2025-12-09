@@ -11,6 +11,7 @@ public class AITargetScript : MonoBehaviour
     private NavMeshAgent m_Agent;
     private float m_Distance;
     private bool m_PathCalculate = false;
+    public Animator m_Animator;
 
     float time = 0f;
 
@@ -83,6 +84,10 @@ public class AITargetScript : MonoBehaviour
     {
         m_Agent.destination = path.GetCurrentWayPoint();
 
+        m_Animator.SetBool("run", false);
+        m_Animator.SetBool("walk", true);
+        m_Agent.speed = 1;
+
         if (m_Agent.remainingDistance <= 0.1f)
         {
             time += Time.deltaTime;
@@ -98,6 +103,9 @@ public class AITargetScript : MonoBehaviour
     void Chase()
     {
         m_Agent.destination = target.position;
+        m_Animator.SetBool("walk", false);
+        m_Animator.SetBool("run", true);
+        m_Agent.speed = 2;
     }
 
 
