@@ -7,6 +7,8 @@ public class AITargetScript : MonoBehaviour
     public float TargetingDistance;
     public float waitTimeOnWayPoint = 1f;
     public Path path;
+    public float runSpeed;
+    public float walkSpeed;
 
     private NavMeshAgent m_Agent;
     private float m_Distance;
@@ -86,7 +88,7 @@ public class AITargetScript : MonoBehaviour
 
         m_Animator.SetBool("run", false);
         m_Animator.SetBool("walk", true);
-        m_Agent.speed = 1;
+        m_Agent.speed = walkSpeed;
 
         if (m_Agent.remainingDistance <= 0.1f)
         {
@@ -105,7 +107,7 @@ public class AITargetScript : MonoBehaviour
         m_Agent.destination = target.position;
         m_Animator.SetBool("walk", false);
         m_Animator.SetBool("run", true);
-        m_Agent.speed = 2;
+        m_Agent.speed = runSpeed;
     }
 
 
