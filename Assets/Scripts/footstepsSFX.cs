@@ -13,6 +13,7 @@ public class FootstepController : MonoBehaviour
     public float stepInterval = 0.5f; // seconds between steps
     private float stepTimer;
     private Vector3 prevPos;
+
     void Start()
     {
         // Build dictionary on startup
@@ -26,6 +27,7 @@ public class FootstepController : MonoBehaviour
         currentAudioClips = footstepDict["Wood"]; 
         PlayFootstep();
     }
+
     void Update()
     {
         Vector3 currentPos = transform.position;
@@ -42,7 +44,7 @@ public class FootstepController : MonoBehaviour
         prevPos = currentPos;
 
         //Debug.Log(horizontalVelocity.x);
-        //float speed = horizontalVelocity.magnitude;
+        // float speed = characterController.velocity;
 
         // if (speed > 0.1f)
         // {
@@ -72,9 +74,9 @@ public class FootstepController : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCharacterControllerHit(ControllerColliderHit hit)
     {
-        string tag = collision.gameObject.tag;
+        string tag = hit.gameObject.tag;
 
         // Check if this tag exists in the dictionary
         if (footstepDict.ContainsKey(tag))
