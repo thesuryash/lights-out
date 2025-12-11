@@ -3,16 +3,19 @@ using System.Collections.Generic;
 
 public class FootstepController : MonoBehaviour
 {
-    public CharacterController characterController;
     public AudioSource audioSource;
      
     [Header("Assign Footstep Clips by Tag")]
     public List<FootstepSet> footstepSets = new();
     private Dictionary<string, AudioClip[]> footstepDict;
-    public AudioClip[] currentAudioClips;
+    private AudioClip[] currentAudioClips;
     public float stepInterval = 0.5f; // seconds between steps
     private float stepTimer;
     private Vector3 prevPos;
+    private bool movedXZ;
+    public HapticManager hapticManager;
+    private string currentTag;
+    public bool causesHaptics;
 
     void Start()
     {
@@ -33,7 +36,7 @@ public class FootstepController : MonoBehaviour
         Vector3 currentPos = transform.position;
 
         // Check only X or Z movement
-        bool movedXZ = Mathf.Round(currentPos.x) != Mathf.Round(prevPos.x) || Mathf.Round(currentPos.z) != Mathf.Round(prevPos.z);
+        movedXZ = Mathf.Round(currentPos.x) != Mathf.Round(prevPos.x) || Mathf.Round(currentPos.z) != Mathf.Round(prevPos.z);
 
         if (movedXZ)
         {
@@ -42,24 +45,6 @@ public class FootstepController : MonoBehaviour
 
         // Update previous position
         prevPos = currentPos;
-
-        //Debug.Log(horizontalVelocity.x);
-        // float speed = characterController.velocity;
-
-        // if (speed > 0.1f)
-        // {
-        //     stepTimer += Time.deltaTime;
-
-        //     if (stepTimer >= stepInterval)
-        //     {
-        //         PlayFootstep();
-        //         stepTimer = 0f;
-        //     }
-        // }
-        // else
-        // {
-        //     stepTimer = 0f;
-        // }
     }
 
     void PlayFootstep()
@@ -71,15 +56,20 @@ public class FootstepController : MonoBehaviour
         //audioSource.PlayOneShot(currentAudioClips[index]);
         audioSource.clip = currentAudioClips[index];
         audioSource.Play();
+        if (causesHaptics)
+        {
+            hapticManager.Play();
+        }
 
     }
 
-    void OnCharacterControllerHit(ControllerColliderHit hit)
+    void OnControllerColliderHit(ControllerColliderHit hit)
     {
         string tag = hit.gameObject.tag;
+        Debug.Log(tag);
 
         // Check if this tag exists in the dictionary
-        if (footstepDict.ContainsKey(tag))
+        if (footstepDict.ContainsKey(tag) && tag != currentTag)
         {
             currentAudioClips = footstepDict[tag]; 
         }
