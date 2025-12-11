@@ -28,6 +28,7 @@ public class FootstepController : MonoBehaviour
         }
         prevPos = transform.position;
         currentAudioClips = footstepDict["Wood"]; 
+        currentTag = "Wood";
         PlayFootstep();
     }
 
@@ -40,6 +41,7 @@ public class FootstepController : MonoBehaviour
 
         if (movedXZ)
         {
+            CheckSurfaceBelow();
             PlayFootstep();
         }
 
@@ -63,17 +65,36 @@ public class FootstepController : MonoBehaviour
 
     }
 
-    void OnControllerColliderHit(ControllerColliderHit hit)
+    void CheckSurfaceBelow()
     {
-        string tag = hit.gameObject.tag;
-        Debug.Log(tag);
+        RaycastHit hit;
+        Vector3 origin = transform.position + Vector3.up * 0.3f;
 
-        // Check if this tag exists in the dictionary
-        if (footstepDict.ContainsKey(tag) && tag != currentTag)
+        if (Physics.Raycast(origin, Vector3.down, out hit, 1f))
         {
-            currentAudioClips = footstepDict[tag]; 
+            string tag = hit.collider.tag;
+
+            if (footstepDict.ContainsKey(tag) && tag != currentTag)
+            {
+                currentAudioClips = footstepDict[tag];
+                currentTag = tag;
+            }
         }
     }
+
+
+    // void OnControllerColliderHit(ControllerColliderHit hit)
+    // {
+    //     string tag = hit.gameObject.tag;
+    //     Debug.Log(tag);
+
+    //     // Check if this tag exists in the dictionary
+    //     if (footstepDict.ContainsKey(tag) && tag != currentTag)
+    //     {
+    //         currentAudioClips = footstepDict[tag]; 
+    //         currentTag = tag;
+    //     }
+    // }
 }
 
 [System.Serializable]

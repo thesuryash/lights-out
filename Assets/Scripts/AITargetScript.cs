@@ -41,7 +41,7 @@ public class AITargetScript : MonoBehaviour
 
         RaycastHit hit;
 
-        if (Physics.Raycast(origin, direction, out hit, Mathf.Infinity))
+        if (Physics.Raycast(origin, direction, out hit, Mathf.Infinity, ~0, QueryTriggerInteraction.Collide))
         {
             if (hit.collider.CompareTag("Player"))
             {
